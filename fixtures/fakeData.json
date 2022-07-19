@@ -1,0 +1,46 @@
+[
+  {
+    "model": "api_app.permissoes",
+    "pk": 1,
+    "fields": { "nome": "1" }
+  },
+  {
+    "model": "api_app.permissoes",
+    "pk": 2,
+    "fields": { "nome": "2" }
+  },
+  {
+    "model": "api_app.usuarios",
+    "pk": 1,
+    "fields": {
+      "email": "admin@1by1.br",
+      "nome": "Admin",
+      "perfil": 1,
+      "notificar": true,
+      "ativo": true,
+      "permissoes": [1, 2]
+    }
+  },
+  {
+    "model": "api_app.usuarios",
+    "pk": 2,
+    "fields": {
+      "email": "default@1by1.br",
+      "nome": "Default",
+      "perfil": 2,
+      "notificar": true,
+      "ativo": true
+    }
+  },
+  {
+    "model": "api_app.usuarios",
+    "pk": 3,
+    "fields": {
+      "email": "prestador@gmail.com",
+      "nome": "Prestador",
+      "perfil": 3,
+      "notificar": true,
+      "ativo": true
+    }
+  }
+]

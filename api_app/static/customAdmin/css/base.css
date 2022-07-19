@@ -1,0 +1,172 @@
+/* Buttons */
+input[type="submit"],
+.submit {
+    background-color: #82a585 !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    background-image: none !important;
+}
+input[name="_addanother"],
+input[name="_continue"] {
+    /* display: none !important; */
+    border: #db2828;
+}
+.deletelink {
+    background-color: #db2828 !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    background-image: none !important;
+    height: auto !important;
+}
+.delete-confirmation,
+.cancel-link {
+    height: auto !important;
+}
+/* Buttons */
+
+.toggle-nav-sidebar {
+    display: none;
+}
+#branding {
+    display: flex;
+    align-items: center;
+}
+#button_menu {
+    margin-right: 10px;
+}
+.login #button_menu {
+    display: none !important;
+}
+.login #branding {
+    min-height: 50px;
+    width: 100% !important;
+    justify-content: center;
+}
+#nav-sidebar {
+    margin-left: 0px !important;
+    display: block !important;
+    border: none;
+}
+#nav-filter {
+    height: 30px;
+}
+.sidebar {
+    background-color: white;
+    padding: 7px;
+}
+.breadcrumbs {
+    padding: 5px !important;
+    font-size: medium;
+    background: #82a585 !important;
+}
+#header {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    overflow: initial !important;
+    background: #436252;
+    padding: 0% !important;
+}
+#header .menu-user {
+    min-width: 100px;
+    padding-right: 10px;
+}
+#header #branding *,
+#header .menu-user .text {
+    color: white !important;
+}
+#header a:link,
+#header a:visited {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+caption {
+    background: #82a585 !important;
+}
+
+div[class*="Amount"] .select,
+div[class*="price"] .select {
+    display: none !important;
+}
+.form-row,
+.form-row * {
+    overflow: visible !important;
+}
+.ui.selection.dropdown .menu {
+    overflow-y: scroll !important;
+}
+#changelist-search > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#changelist .actions label {
+    width: 40%;
+    align-items: center;
+}
+#changelist .actions label div {
+    margin: 0 5px;
+}
+#changelist .actions {
+    align-items: center;
+}
+#searchbar {
+    width: 80% !important;
+    max-width: 600px !important;
+}
+#changelist-search input[type="text"] {
+    margin: 0 10px !important;
+}
+#toolbar {
+    margin: 0px !important;
+}
+#toolbar * {
+    height: auto !important;
+    font-size: 18px !important;
+}
+textarea,
+.related-widget-wrapper {
+    width: 100% !important;
+    overflow: visible !important;
+}
+.related-widget-wrapper a {
+    display: none;
+}
+div.readonly {
+    margin: 0 !important;
+}
+#changelist .actions {
+    display: flex !important;
+    padding: 10px !important;
+}
+#changelist .actions label {
+    display: flex !important;
+}
+#changelist .button {
+    background-color: #82a585 !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    background-image: none !important;
+    margin: 0 10px !important;
+}
+.toggle-menu {
+    margin-right: 20px;
+}
+h2 {
+    background: #82a585 !important;
+    color: white !important;
+    padding: 5px;
+    box-sizing: border-box;
+}
+#content {
+    width: 100% !important;
+}
+.search,
+.ui.search .input,
+.ui.search .results {
+    width: 100%;
+}
+fieldset.module.aligned {
+    display: flex;
+    flex-direction: column;
+}

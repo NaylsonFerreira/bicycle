@@ -1,6 +1,7 @@
 from django.contrib.auth import authenticate
 from django.contrib.auth.forms import PasswordResetForm
 from django.contrib.auth.models import Group, Permission, User
+from api_app.randonData import generateData
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.authtoken.models import Token
 from rest_framework.decorators import api_view, permission_classes
@@ -21,6 +22,12 @@ from api_app.serializers import (EmpresasEstabelecimentosSerializer,
                                  PermissionSerializer, PermissoesSerializer,
                                  PrestadoresSerializer, ServicosSerializer,
                                  UserSerializer, UsuariosSerializer)
+
+
+@api_view(['GET'])
+def randonData(request):
+    generateData()
+    return Response('ok')
 
 
 @api_view(['GET'])

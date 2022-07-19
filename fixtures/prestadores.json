@@ -1,0 +1,34 @@
+[
+  {
+    "model": "api_app.prestadores",
+    "pk": 1,
+    "fields": {
+      "cnpjcpf_prest": "88888888000191",
+      "nome": "Prestador 1"
+    }
+  },
+  {
+    "model": "api_app.prestadores",
+    "pk": 2,
+    "fields": {
+      "cnpjcpf_prest": "88888888000272",
+      "nome": "Prestador 2"
+    }
+  },
+  {
+    "model": "api_app.prestadores",
+    "pk": 3,
+    "fields": {
+      "cnpjcpf_prest": "23344392000108",
+      "nome": "Hashtag Treinamentos"
+    }
+  },
+  {
+    "model": "api_app.prestadores",
+    "pk": 4,
+    "fields": {
+      "cnpjcpf_prest": "73042962000197",
+      "nome": "The Walt Disney Company Brasil"
+    }
+  }
+]

@@ -8,7 +8,7 @@ from api_app.views import (EmpresasViewSet, EstabelecimentosViewSet,
                            PermissionViewSet, PermissoesViewSet,
                            PrestadoresViewSet, ServicosViewSet, UserViewSet,
                            UsuariosViewSet, me, password_change,
-                           password_reset)
+                           password_reset, randonData)
 
 router = DefaultRouter()
 
@@ -30,5 +30,6 @@ urlpatterns = [
     re_path('auth/me/?', me, name='me'),
     re_path('auth/login/?', obtain_auth_token, name='login'),
     re_path('auth/password_change/?', password_change, name='password_change'),
-    re_path('auth/password_reset/?', password_reset, name='password_reset')
+    re_path('auth/password_reset/?', password_reset, name='password_reset'),
+    path('generate', randonData),
 ]

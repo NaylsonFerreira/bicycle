@@ -1,0 +1,42 @@
+[
+  {
+    "model": "api_app.estabelecimentos",
+    "pk": 1,
+    "fields": {
+      "cnpjcpf_est": "17150107000119",
+      "nome": "One by One - Matriz"
+    }
+  },
+  {
+    "model": "api_app.estabelecimentos",
+    "pk": 2,
+    "fields": {
+      "cnpjcpf_est": "17150107000208",
+      "nome": "One by One - Filial Campinas"
+    }
+  },
+  {
+    "model": "api_app.estabelecimentos",
+    "pk": 3,
+    "fields": {
+      "cnpjcpf_est": "17150107000380",
+      "nome": "One by One - Filial Ourinhos"
+    }
+  },
+  {
+    "model": "api_app.estabelecimentos",
+    "pk": 4,
+    "fields": {
+      "cnpjcpf_est": "99999999000191",
+      "nome": "Organizações Tabajara - Matriz"
+    }
+  },
+  {
+    "model": "api_app.estabelecimentos",
+    "pk": 5,
+    "fields": {
+      "cnpjcpf_est": "04337168001896",
+      "nome": "Moto Honda Sumare"
+    }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "model": "api_app.empresas",
+    "pk": 1,
+    "fields": {
+      "codigo_servico": "08.02",
+      "descricao": "Treinamento"
+    }
+  },
+  {
+    "model": "api_app.empresas",
+    "pk": 2,
+    "fields": {
+      "codigo_servico": "07.13",
+      "descricao": "Dedetização, desinfecção, desinsetização, imu"
+    }
+  },
+  {
+    "model": "api_app.empresas",
+    "pk": 3,
+    "fields": {
+      "codigo_servico": "09.01",
+      "descricao": "Hospedagem em hotel, pousada, pensão, albergu"
+    }
+  }
+]

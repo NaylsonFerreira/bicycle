@@ -53,7 +53,7 @@ def generateData():
             serie = 1
         try:
             empresa = Empresas.objects.get(pk=empresa_id)
-            estab.cnpjcpf_est = f'{empresa.cnpjcpf_emp}000{serie}'
+            estab.cnpjcpf_est = f'{empresa.cnpjcpf_emp}00000{serie}'
             estab.nome = f'{empresa.nome} - {estab.nome.split("-")[-1]}'
             estab.save()
         except:
@@ -94,10 +94,10 @@ def generateData():
 
         nota = Notas()
         nota.cnpjcpf_emp = firstsTen[empresa].cnpjcpf_emp
-        nota.cnpjcpf_est = f'{firstsTen[empresa].cnpjcpf_emp}000{serie}'
+        nota.cnpjcpf_est = f'{firstsTen[empresa].cnpjcpf_emp}00000{serie}'
         nota.cnpjcpf_prest = prestadors[serie].cnpjcpf_prest
         nota.numero_nota = aux
-        nota.serie = fake.ean(length=8)
+        nota.serie = 'NFE'
         nota.deducao = randrange(100)
         nota.valor_servico = randrange(100)
         nota.dh_emissao = f'2022-{randrange(1,12)}-{randrange(1,30)}T00:00:00'

@@ -62,6 +62,17 @@ def generateData():
         aux += 1
         serie += 1
 
+    for estab in Estabelecimentos.objects.all():
+        try:
+            parametro, created = Parametros.objects.get_or_create(
+                cnpjcpf_est=estab.cnpjcpf_est)
+            parametro.nome = estab.nome
+            parametro.day = randrange(1, 30)
+            parametro.hour = f'{randrange(8,12)}:00:00.000'
+            parametro.save()
+        except:
+            pass
+
     firstsTen = Empresas.objects.all()[:20]
     prestadors = Prestadores.objects.all()[:20]
     empresa = 0

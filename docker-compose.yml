@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+
+  database:
+    image: postgres:12.0-alpine
+    container_name: database
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+
+  backend:
+    depends_on:
+      - database
+    build: ./backend
+    image: backend
+    container_name: backend
+    ports:
+      - 8000:8000
+    environment:
+      - DRAFT_SECRET_KEY=mySecretKey
+      - DRAFT_DB_ENGINE=postgres
+      - DRAFT_DB_NAME=auto4doc
+      - DRAFT_DB_USER=postgres
+      - DRAFT_DB_PASSWORD=postgres
+      - DRAFT_DB_HOST=database

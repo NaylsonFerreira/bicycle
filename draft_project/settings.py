@@ -155,4 +155,6 @@ MEDIA_ROOT = get_env('DRAFT_MEDIA_ROOT', 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+FIXTURE_DIRS = ('fixtures', '')
+
 # LOGGING = log_config()

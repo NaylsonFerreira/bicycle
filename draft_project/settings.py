@@ -62,21 +62,21 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'draft_project.wsgi.application'
 
+ENGINE_DB = get_env('DRAFT_DB_ENGINE', 'mysql')
 
 DATABASES = {
     'default': {
-        'ENGINE': f"django.db.backends.{get_env('DRAFT_DB_ENGINE', 'mysql')}",
+        'ENGINE': f"django.db.backends.{ENGINE_DB}",
         'NAME': get_env('DRAFT_DB_NAME', 'draft'),
         'USER': get_env('DRAFT_DB_USER', 'postgres'),
         'PASSWORD': get_env('DRAFT_DB_PASSWORD', ''),
         'HOST': get_env('DRAFT_DB_HOST', 'localhost'),
         'PORT': get_env('DRAFT_DB_PORT', '3306'),
-        'OPTIONS': {
-            'autocommit': True,
-        },
     }
 }
 
+if ENGINE_DB == 'mysql':
+    DATABASES['default']['OPTIONS'] = {'autocommit': True}
 
 AUTH_PASSWORD_VALIDATORS = [
     {

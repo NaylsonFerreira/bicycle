@@ -45,7 +45,7 @@ jobs:
           python manage.py test
         env:
           DRAFT_SECRET_KEY: mySecretKeymySecretKey
-          DRAFT_DB_ENGINE: postgres
+          DRAFT_DB_ENGINE: postgresql
           DRAFT_DB_NAME: auto4doc
           DRAFT_DB_USER: postgres
           DRAFT_DB_PASSWORD: postgres

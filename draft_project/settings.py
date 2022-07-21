@@ -65,7 +65,7 @@ WSGI_APPLICATION = 'draft_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': f"django.db.backends.{get_env('DRAFT_DB_ENGINE', 'mysql')}",
         'NAME': get_env('DRAFT_DB_NAME', 'draft'),
         'USER': get_env('DRAFT_DB_USER', 'postgres'),
         'PASSWORD': get_env('DRAFT_DB_PASSWORD', ''),

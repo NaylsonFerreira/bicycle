@@ -1,0 +1,53 @@
+name: Tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  container-job:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Lint with flake8
+        run: |
+          flake8 --extend-ignore=E501,E722
+
+      - name: Tests
+        run: |
+          python manage.py migrate
+          python manage.py loaddata fixtures/*
+          python manage.py test
+        env:
+          DRAFT_SECRET_KEY: mySecretKeymySecretKey
+          DRAFT_DB_ENGINE: postgres
+          DRAFT_DB_NAME: auto4doc
+          DRAFT_DB_USER: postgres
+          DRAFT_DB_PASSWORD: postgres
+          DRAFT_DB_HOST: postgres
+          DRAFT_DB_PORT: 5432

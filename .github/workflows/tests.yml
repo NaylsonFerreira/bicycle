@@ -49,5 +49,5 @@ jobs:
           DRAFT_DB_NAME: auto4doc
           DRAFT_DB_USER: postgres
           DRAFT_DB_PASSWORD: postgres
-          DRAFT_DB_HOST: postgres
+          DRAFT_DB_HOST: localhost
           DRAFT_DB_PORT: 5432

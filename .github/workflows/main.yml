@@ -3,12 +3,12 @@ name: Tests
 on:
   workflow_dispatch:
   push:
-    branches: [master]
+    branches: [master, main]
   pull_request:
-    branches: [master]
+    branches: [master, main]
 
 jobs:
-  container-job:
+  main-job:
     runs-on: ubuntu-latest
     services:
       postgres:

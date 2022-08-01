@@ -76,7 +76,10 @@ DATABASES = {
 }
 
 if ENGINE_DB == 'mysql':
-    DATABASES['default']['OPTIONS'] = {'autocommit': True}
+    DATABASES['default']['OPTIONS'] = {
+        'autocommit': True,
+        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
 
 AUTH_PASSWORD_VALIDATORS = [
     {

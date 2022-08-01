@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = get_env('DRAFT_SECRET_KEY', 'lc$a@$cy*xoabni2r=$28=3s-59@$')
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
